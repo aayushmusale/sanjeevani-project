@@ -16,7 +16,7 @@ export function Guidelines() {
           
           {/* Left Side: Bold Question */}
           <div className="lg:w-1/3 mb-8 lg:mb-0">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-[#002244] leading-tight text-white">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-[#002244] leading-tight text-black">
               What is the eligibility you need to study abroad?
             </h2>
             <p className="text-sm text-red-600 mt-2">
@@ -26,7 +26,7 @@ export function Guidelines() {
           
           {/* Right Side: Bullet Points */}
           <div className="lg:w-2/3">
-            <ul className="space-y-4 text-lg text-gray-700 text-white">
+            <ul className="space-y-4 text-lg text-gray-700 text-black">
               {eligibilityCriteria.map((item, index) => (
                 <li key={index} className="flex items-start">
                   {/* Custom Bullet Point (Red Circle) */}

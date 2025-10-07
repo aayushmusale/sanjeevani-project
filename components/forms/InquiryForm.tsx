@@ -21,6 +21,7 @@ export default function InquiryForm() {
       const response = await fetch('/api/leads', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        
         body: JSON.stringify(data),
       });
 
@@ -47,7 +48,7 @@ export default function InquiryForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 p-6 bg-white shadow-lg rounded-xl">
-      <h2 className="text-2xl font-bold mb-4">Book Your Free Counseling</h2>
+      {/* <h2 className="text-2xl font-bold mb-4 text-black">Book Your Free Counseling</h2> */}
       
       {/* Name Field */}
       <div>

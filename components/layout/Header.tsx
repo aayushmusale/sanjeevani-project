@@ -6,14 +6,16 @@ import { useState } from 'react';
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Our Services', href: '/services'},
   { name: 'About Us', href: '/about' },
+  { name: 'Blog', href: '/blog' },
+  
   // { name: 'Contact', href: '/contact' },
   // 'Countries' link will be dynamic
 ];
 
 // Mock data (will be replaced by Sanity fetch in the final version)
-const mockCountries = ['Russia', 'Canada', 'Germany'];
+const mockCountries = ['Privolzhsky University', 'Sechenov University', 'Pirogov University'];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,9 +39,9 @@ export default function Header() {
           {/* Dynamic Countries Dropdown (Framework) */}
           <div className="relative group">
             <button className="text-gray-600 hover:text-indigo-600 transition">
-              Countries
+              Universities
             </button>
-            <div className="absolute hidden group-hover:block bg-white shadow-lg py-2 w-40 mt-1 rounded-md">
+            <div className="absolute hidden group-hover:block bg-white shadow-lg py-2 w-60 mt-1 rounded-md">
               {mockCountries.map((country) => (
                 <Link key={country} href={`/countries/${country.toLowerCase()}`} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                   {country}
@@ -96,59 +98,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-
-// 'use client';
-
-// import Link from 'next/link';
-// import { useState } from 'react';
-// import { Menu, X } from 'lucide-react';
-
-// export default function Header() {
-//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-//   return (
-//     <header className="bg-white shadow-md sticky top-0 z-50">
-//       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex justify-between items-center h-16">
-//           <Link href="/" className="flex items-center space-x-2">
-//             <span className="text-2xl font-bold text-blue-600">
-//               {process.env.NEXT_PUBLIC_COMPANY_NAME || 'StudyAbroad'}
-//             </span>
-//           </Link>
-
-//           <div className="hidden md:flex items-center space-x-8">
-//             <Link href="/" className="text-gray-700 hover:text-blue-600 transition">Home</Link>
-//             <Link href="/countries" className="text-gray-700 hover:text-blue-600 transition">Countries</Link>
-//             <Link href="/universities" className="text-gray-700 hover:text-blue-600 transition">Universities</Link>
-//             <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition">Blog</Link>
-//             <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">About Us</Link>
-//             <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition">Contact</Link>
-//             <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
-//               Apply Now
-//             </Link>
-//           </div>
-
-//           <button className="md:hidden text-gray-700" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-//             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-//           </button>
-//         </div>
-
-//         {mobileMenuOpen && (
-//           <div className="md:hidden py-4 space-y-4">
-//             <Link href="/" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>Home</Link>
-//             <Link href="/countries" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>Countries</Link>
-//             <Link href="/universities" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>Universities</Link>
-//             <Link href="/blog" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-//             <Link href="/about" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>About Us</Link>
-//             <Link href="/contact" className="block text-gray-700 hover:text-blue-600" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
-//             <Link href="/contact" className="block bg-blue-600 text-white px-6 py-2 rounded-lg text-center" onClick={() => setMobileMenuOpen(false)}>
-//               Apply Now
-//             </Link>
-//           </div>
-//         )}
-//       </nav>
-//     </header>
-//   );
-// }

@@ -1,7 +1,7 @@
 export function WhyUs() {
   return (
     <div className="container p-10">
-      <h4 className="scroll-m-20 text-4xl font-bold tracking-tight text-center text-white">
+      <h4 className="scroll-m-20 mt-10 text-4xl font-bold tracking-tight text-center text-black">
         Why Us?
       </h4>
       
@@ -20,14 +20,3 @@ export function WhyUs() {
     </div>
   );
 }
-
-// export function WhyUs() {
-//   return (
-//     <div className="container p-10">
-//         <h4 className="scroll-m-20 text-xl font-semibold tracking-tight text-center">
-//         People stopped telling jokes
-//         </h4>
-//     </div>
-    
-//   )
-// }

@@ -21,7 +21,7 @@ const features: Feature[] = [
 
 export default function WhyChooseUs({ title = "Why Choose Global Education Consultants?" }) {
   return (
-    <section className="py-16 sm:py-24 text-white bg-gradient-to-b from-[#002244] to-[#011627]">
+    <section className="py-16 sm:py-24 text-black ">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-extrabold sm:text-5xl">

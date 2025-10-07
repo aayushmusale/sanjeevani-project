@@ -8,7 +8,7 @@ export default function AboutUsPage() {
     <div className="pt-16">
       
       {/* Hero Section */}
-      <section className=" text-white  py-20">
+      <section className=" text-black  py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl font-extrabold">
             Pioneering Your Global Education Journey
@@ -20,7 +20,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* Our Mission/Vision */}
-      <section className="py-16 text-white bg-gradient-to-b from-[#002244] to-[#011627]">
+      <section className="py-16 text-black bg-white">
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-4">
             <Building2 className="h-10 w-10 text-indigo-600" />
@@ -33,9 +33,9 @@ export default function AboutUsPage() {
             <Users className="h-10 w-10 text-indigo-600" />
             <h2 className="text-3xl font-bold">Our Values</h2>
             <ul className="list-disc list-inside space-y-2">
-              <li>**Integrity:** Absolute transparency in fees and processes.</li>
-              <li>**Excellence:** Providing up-to-date and accurate university information.</li>
-              <li>**Support:** Guiding students from application to post-arrival.</li>
+              <li>Integrity: Absolute transparency in fees and processes.</li>
+              <li>Excellence: Providing up-to-date and accurate university information.</li>
+              <li>Support: Guiding students from application to post-arrival.</li>
             </ul>
           </div>
         </div>

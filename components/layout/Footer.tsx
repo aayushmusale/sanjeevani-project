@@ -66,6 +66,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
           <p>&copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.</p>
+          <p> Website developed by @aayushmusale</p>
         </div>
       </div>
     </footer>

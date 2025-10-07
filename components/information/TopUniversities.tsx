@@ -33,7 +33,7 @@ const universityData = [
 
 export default function TopUniversities() {
   return (
-    <section className="bg-gradient-to-b from-[#002244] to-[#011627] text-white py-16">
+    <section className=" text-black py-16">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row lg:space-x-12 mb-12">
@@ -47,7 +47,7 @@ export default function TopUniversities() {
             </h1>
           </div>
           <div className="lg:w-1/2 mt-6 lg:mt-0">
-            <p className="text-lg leading-relaxed text-gray-300">
+            <p className="text-lg leading-relaxed text-black">
               Russia is the home of the leading medical universities across the globe. From being affordable to
               delivering quality education, and research exposure, the students can explore various opportunities
               in the field of medicine. Here are the top 3 medical universities in Russia that are a common choice

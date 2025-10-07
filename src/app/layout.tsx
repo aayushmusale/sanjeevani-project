@@ -23,10 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <main className="h-[calc(100vh)] bg-gradient-to-b from-[#002244] to-[#011627]"> {/* pt-20 for fixed header */}
+        <main className="h-[calc(100vh)] "> 
+          {/* pt-20 for fixed header */}
           {children}
         </main>
-        
+        {/* <Footer/> */}
         <WhatsAppWidget /> 
       </body>
     </html>

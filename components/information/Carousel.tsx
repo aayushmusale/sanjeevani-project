@@ -22,9 +22,9 @@ export default function Carousel() {
         
     //   <hr className="border-gray-200" />
       
-      <section className="py-16 bg-white bg-gradient-to-b from-[#002244] to-[#011627] ">
+      <section className="py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-10">What Our Students Say</h2>
+          <h2 className="text-3xl font-bold text-black mb-10">What Our Students Say</h2>
           
           {/* Implement your Swiper TestimonialCarousel here */}
           <div className="h-64 flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300">
