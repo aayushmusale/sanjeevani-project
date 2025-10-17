@@ -27,7 +27,7 @@ export default function BlogPage() {
           <div className="space-y-6">
             {blogPosts.map((post) => (
               <div key={post.id} className="p-6 bg-white shadow rounded-lg border border-gray-200">
-                <p className="text-sm font-semibold text-indigo-600 uppercase mb-1">
+                <p className="text-sm font-semibold text-red-600 uppercase mb-1">
                   {post.category}
                 </p>
                 
@@ -36,7 +36,7 @@ export default function BlogPage() {
                 */}
                 <Link 
                   href={`/blog/${post.id}`} 
-                  className="text-xl font-semibold text-gray-800 hover:text-indigo-600 transition"
+                  className="text-xl font-semibold text-gray-800 hover:text-red-600 transition"
                 >
                   {post.title}
                 </Link>
