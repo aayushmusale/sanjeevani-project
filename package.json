@@ -9,13 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@hookform/resolvers": "^5.2.2",
     "@sanity/client": "^7.11.2",
     "country-state-city": "^3.2.1",
-=======
-    "@sanity/client": "^7.11.2",
->>>>>>> 774263632fa39ca9694050fa37cdd38eb7bf2b5d
     "lucide-react": "^0.544.0",
     "mongoose": "^8.18.3",
     "next": "15.5.4",

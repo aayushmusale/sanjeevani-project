@@ -95,7 +95,7 @@ export default function ApplyNowPage() {
   };
 
   return (
-    <div className="bg-white p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
+    <div className="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
                 {/* CHANGE: Reduced margin below the heading */}
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Apply Now</h2>
                 {/* CHANGE: Reduced spacing between form fields */}
