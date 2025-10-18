@@ -1,7 +1,7 @@
-// components/information/ServiceCarousel.tsx
+// src/app/services/page.tsx
 import { Briefcase, GraduationCap, Globe, DollarSign } from 'lucide-react';
 import React from 'react';
-import Footer from '../../../components/layout/Footer';
+
 // Define the structure for a Service Card
 interface Service {
   id: number;
@@ -10,7 +10,6 @@ interface Service {
   icon: React.ElementType;
 }
 
-// Mock Data for the Services (Replace with your actual data)
 const services: Service[] = [
   {
     id: 1,
@@ -40,30 +39,26 @@ const services: Service[] = [
     id: 5,
     title: 'Post-Admission Care',
     description: 'Continuous support for accommodation, local registration, and mentoring throughout your entire 6-year course.',
-    icon: Briefcase, // Using Briefcase again, choose a better icon if available
+    icon: Briefcase,
   },
 ];
 
-export const Services: React.FC = () => {
+// ✅ CHANGED to a default export
+export default function Services() {
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 pt-32"> {/* Added pt-32 for spacing below the fixed header */}
       <div className="container mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
           Our Core Services
         </h2>
         
-        {/* Carousel Container: 
-          - overflow-x-scroll allows horizontal scrolling
-          - whitespace-nowrap keeps the cards on a single line
-          - snap-x ensures the cards snap nicely into view
-        */}
-        <div className="flex overflow-x-scroll space-x-6 pb-4 md:pb-6 snap-x snap-mandatory scrollbar-hide">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={service.id}
-                className="flex-shrink-0 w-80 snap-center p-6 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="p-6 bg-white border border-gray-200 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="p-3 bg-red-600 rounded-full text-white">
@@ -78,13 +73,7 @@ export const Services: React.FC = () => {
             );
           })}
         </div>
-        
-        <p className="text-center text-sm text-gray-500 mt-6">
-          &lt; Scroll to see all our services &gt;
-        </p>
       </div>
-
     </section>
-    
   );
 };

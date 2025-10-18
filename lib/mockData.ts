@@ -1,14 +1,14 @@
 import { Country, University, Testimonial, BlogPost } from '../types';
 // import { Country, University, Testimonial, BlogPost } from '../types'
 
-export interface Country {
-    name: string;
-    slug: string;
-    flagEmoji: string;
-    description: string;
-    averageFees: string;
-    topUniversitiesCount: number;
-}
+// export interface Country {
+//     name: string;
+//     slug: string;
+//     flagEmoji: string;
+//     description: string;
+//     averageFees: string;
+//     topUniversitiesCount: number;
+// }
 
 export const countries: Country[] = [
   {
@@ -176,14 +176,14 @@ export const universities: University[] = [
   }
 ];
 
-export interface Testimonial {
-  studentName: string;
-  reviewText: string;
-  university: string;
-  country: string;
-  rating: number; // 1 to 5
-  year: number;
-}
+// export interface Testimonial {
+//   studentName: string;
+//   reviewText: string;
+//   university: string;
+//   country: string;
+//   rating: number; // 1 to 5
+//   year: number;
+// }
 
 export const testimonials: Testimonial[] = [
   {

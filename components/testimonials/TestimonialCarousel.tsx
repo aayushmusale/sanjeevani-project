@@ -1,4 +1,4 @@
-// src/components/ui/TestimonialCarousel.tsx (File path adjusted for clarity)
+// src/components/ui/TestimonialCarousel.tsx
 'use client';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
@@ -36,8 +36,10 @@ export default function TestimonialCarousel() {
                 ))}
               </div>
               
-              {/* Review Text */}
-              <p className="text-lg italic mb-6">"{current.reviewText}"</p>
+              {/* Review Text - ✨ FIX IS HERE ✨ */}
+              <p className="text-lg italic mb-6">
+                &ldquo;{current.reviewText}&rdquo;
+              </p>
               
               {/* Student Info */}
               <h4 className="font-bold text-xl">{current.studentName}</h4>
@@ -82,70 +84,3 @@ export default function TestimonialCarousel() {
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// 'use client';
-// import { useState } from 'react';
-// import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
-// import Card from '../ui/Card';
-// import Container from '../ui/Container';
-// import { testimonials } from '@/lib/mockData';
-
-// export default function TestimonialCarousel() {
-//   const [idx, setIdx] = useState(0);
-//   const current = testimonials[idx];
-
-//   return (
-//     <section className="py-16 bg-gray-50">
-//       <Container>
-//         <div className="text-center mb-12">
-//           <h2 className="text-3xl md:text-4xl font-bold mb-4">Student Success Stories</h2>
-//           <p className="text-lg text-gray-600">Hear from our students</p>
-//         </div>
-//         <div className="max-w-4xl mx-auto">
-//           <Card className="relative">
-//             <div className="text-center">
-//               <div className="flex justify-center mb-4">
-//                 {[...Array(current.rating)].map((_, i) => <Star key={i} size={24} className="text-amber-400 fill-amber-400" />)}
-//               </div>
-//               <p className="text-lg italic mb-6">"{current.reviewText}"</p>
-//               <h4 className="font-bold text-xl">{current.studentName}</h4>
-//               <p className="text-gray-600">{current.university}, {current.country}</p>
-//               <p className="text-gray-500 text-sm mt-1">Class of {current.year}</p>
-//             </div>
-//             <button onClick={() => setIdx((idx - 1 + testimonials.length) % testimonials.length)}
-//                     className="absolute left-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100">
-//               <ChevronLeft size={24} />
-//             </button>
-//             <button onClick={() => setIdx((idx + 1) % testimonials.length)}
-//                     className="absolute right-4 top-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100">
-//               <ChevronRight size={24} />
-//             </button>
-//           </Card>
-//           <div className="flex justify-center mt-6 space-x-2">
-//             {testimonials.map((_, i) => (
-//               <button key={i} onClick={() => setIdx(i)} className={`w-3 h-3 rounded-full ${i === idx ? 'bg-blue-600' : 'bg-gray-300'}`} />
-//             ))}
-//           </div>
-//         </div>
-//       </Container>
-//     </section>
-//   );
-// }

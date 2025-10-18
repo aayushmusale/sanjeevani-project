@@ -6,7 +6,7 @@ import InquiryForm from '../../components/forms/InquiryForm';
 import { CheckCircle } from 'lucide-react';
 import Image1 from '../../components/images/homepagebg.webp';
 import { WhyUs } from "../../components/information/WhyUs";
-import { Services } from './services/page';
+import Services from './services/page';
 import Carousel from "../../components/information/Carousel";
 import TopUniversities from "../../components/information/TopUniversities";
 import { Guidelines } from '../../components/information/Guidelines';

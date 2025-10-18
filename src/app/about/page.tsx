@@ -1,4 +1,4 @@
-import { Award, Compass, HeartHandshake, Map, Plane, ShieldCheck } from 'lucide-react';
+import { Award, Compass, HeartHandshake, Plane } from 'lucide-react';
 import Carousel from '../../../components/information/Carousel';
 import Image from 'next/image';
 import fs from 'fs';
