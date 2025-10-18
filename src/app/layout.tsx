@@ -9,7 +9,7 @@ import WhatsAppWidget from "../../components/layout/WhatsAppWidget";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Sanjeevani Education Consultants - Study Abroad",
+  title: "Sanjivani Education Consultants - Study Abroad",
   description: "Find the best universities for your study abroad journey. Low fees, worldwide recognition. Apply now!",
 };
 

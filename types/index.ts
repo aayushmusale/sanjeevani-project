@@ -1,4 +1,4 @@
-// src/types/index.ts (Define your Zod Schema and TypeScript Type)
+// src/types/index.ts
 import { z } from 'zod';
 
 export const InquirySchema = z.object({
@@ -10,7 +10,42 @@ export const InquirySchema = z.object({
 
 export type InquiryFormInputs = z.infer<typeof InquirySchema>;
 
+// This is the correct, detailed University interface. KEEP THIS ONE.
+export interface University {
+  // Basic Info
+  name: string;
+  slug: string;
+  location: string;
+  image: string;
+  alt: string;
+  official_website : string;
 
+  // Detailed Info
+  description: string;
+  establishedYear: number;
+  recognition: string[];
+  mediumOfInstruction: string;
+  annualFees: string;
+
+  // Academic Details
+  courseDurations: { name: string; duration: string }[];
+  academicSession: string;
+  eligibility: {
+    academic: string;
+    neet: string;
+  };
+
+  // Facilities
+  hostel: {
+    availability: string;
+    description: string;
+  };
+
+  // Lists
+  departments: string[];
+  affiliatedHospitals: string[];
+  gallery: { src: string; alt: string }[];
+}
 
 export interface Country {
   name: string;
@@ -23,20 +58,6 @@ export interface Country {
   averageFees: string;
   livingCost: string;
   topUniversitiesCount: number;
-}
-
-export interface University {
-  name: string;
-  slug: string;
-  country: string;
-  city: string;
-  description: string;
-  establishedYear?: number;
-  ranking?: string;
-  accreditation: string[];
-  fees: string;
-  duration: string;
-  facilities: string[];
 }
 
 export interface Testimonial {
@@ -57,4 +78,3 @@ export interface BlogPost {
   category: string;
   publishedAt: string;
 }
- 

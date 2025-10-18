@@ -67,7 +67,7 @@ export default function ApplyNowPage() {
             <div className="mt-8">
               <a href="mailto:info@sanjivaniedu.com" className="inline-flex items-center justify-center text-md font-semibold text-gray-700 hover:text-red-600 transition-colors duration-300">
                 <Mail className="h-5 w-5 mr-2" />
-                Have a query? Contact us at info@sanjivaniedu.com
+                Have a query? Contact us at {process.env.NEXT_PUBLIC_COMPANY_EMAIL}
               </a>
             </div>
           </div>
