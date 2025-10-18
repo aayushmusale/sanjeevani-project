@@ -32,7 +32,7 @@ export default function AboutUsPage() {
       </section>
 
       {/* 2. OUR STORY SECTION - Builds Trust and Authenticity */}
-      <section className="py-16">
+      <section className="py-2">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
              {/* Replace with an actual image of your team or office for better impact */}
@@ -44,13 +44,13 @@ export default function AboutUsPage() {
               className="rounded-lg shadow-xl object-cover"
             />
           </div>
-          <div className="lg:w-1/2 space-y-4">
+          <div className="lg:w-1/2 space-y-4 mr-20">
             <h2 className="text-3xl font-bold text-red-600">Our Story: More Than a Consultancy</h2>
             <p className="text-lg text-gray-700">
               Sanjivani was founded after seeing too many bright students get lost in confusing paperwork, false promises, and a lack of proper guidance. We built this consultancy on a simple principle: to be the honest, reliable senior you wish you had when starting this journey.
             </p>
             <p className="text-lg text-gray-700">
-              Our mission isn’t just to get you an admission letter; it’s to ensure you land safely in Russia, settle in comfortably, and have a local support system to help you succeed throughout your entire 6-year medical degree. **Your success is our success.**
+              Our mission isn’t just to get you an admission letter; it’s to ensure you land safely in Russia, settle in comfortably, and have a local support system to help you succeed throughout your entire 6-year medical degree. <br/><b>Your success is our success.</b>
             </p>
           </div>
         </div>
@@ -91,9 +91,8 @@ export default function AboutUsPage() {
       </section>
 
       {/* 4. SUCCESS STORIES (CAROUSEL) - Social Proof */}
-      <section className="py-16">
+      <section className="py-1">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">See Our Students Thriving in Russia</h2>
           {/* Pass the dynamically loaded images to your Carousel component */}
           <Carousel images={galleryImages} />
         </div>
