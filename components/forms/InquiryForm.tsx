@@ -99,7 +99,7 @@ export default function ApplyNowPage() {
                 {/* CHANGE: Reduced margin below the heading */}
                 <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Apply Now</h2>
                 {/* CHANGE: Reduced spacing between form fields */}
-                <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+                <form onSubmit={handleSubmit} className="space-y-4 text-black" noValidate>
                   
                   {/* Name, Email, Phone (No Changes) */}
                   <div>
