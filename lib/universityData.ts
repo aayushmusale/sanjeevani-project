@@ -14,7 +14,7 @@ export const universityData: University[] = [
   {
     name: "Privolzhsky Research Medical University",
     slug: "privolzhsky-research-medical-university",
-    image: '/images/privolzhsky.jpg',
+    image: '/images/privolzhsky.webp',
     alt: "Privolzhsky Research Medical University building",
     location: "Nizhny Novgorod, Russia",
     description: "Founded in 1920, PRMU is one of the leading medical universities in the Volga region, known for its strong research programs and clinical training.",
@@ -23,7 +23,7 @@ export const universityData: University[] = [
   {
     name: "Sechenov University",
     slug: "sechenov-university",
-    image: '/images/sechenov.jpg',
+    image: '/images/sechenov.webp',
     alt: "Sechenov University building",
     location: "Moscow, Russia",
     description: "As the oldest and largest medical school in Russia, Sechenov University is a prestigious institution with a rich history of innovation in medicine and healthcare.",
@@ -32,7 +32,7 @@ export const universityData: University[] = [
   {
     name: "Pirogov University",
     slug: "pirogov-university",
-    image: '/images/pirogov.jpg',
+    image: '/images/pirogov.webp',
     alt: "Pirogov University building",
     location: "Moscow, Russia",
     description: "Named after the famous surgeon Nikolay Pirogov, this university is a national research center and a leader in medical education and biomedical sciences.",
