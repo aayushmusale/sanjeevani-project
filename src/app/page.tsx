@@ -2,7 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import InquiryForm from '../../components/forms/InquiryForm';
 import { CheckCircle } from 'lucide-react';
-import Image1 from '../../components/images/homepagebg.webp';
+// import Image1 from '../../components/images/homepagebg.webp';
+import Image1 from '../../public/hero_section_image.webp'
 import { WhyUs } from "../../components/information/WhyUs";
 import Services from './services/page';
 import Carousel from "../../components/information/Carousel";

@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Mail, Send } from 'lucide-react';
-import { Country, State, City }  from 'country-state-city';
-import bgImage from '../../../public/images/applynowBGimage.webp'
+import { Mail, Send, Loader2 } from 'lucide-react'; // 1. Import Loader2 icon
+import { Country, State, City } from 'country-state-city';
+
 // Interfaces remain the same
 interface ICountry { isoCode: string; name: string; }
 interface IState { isoCode: string; name: string; }
@@ -19,18 +19,28 @@ export default function ApplyNowPage() {
   const [cities, setCities] = useState<ICity[]>([]);
   const [selectedCountry, setSelectedCountry] = useState<string>('');
   const [selectedState, setSelectedState] = useState<string>('');
+  
+  // 2. Add a state to track submission status
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // All your useEffect and handler functions remain exactly the same
+  // useEffect and handler functions remain the same...
   useEffect(() => { setCountries(Country.getAllCountries()); }, []);
   useEffect(() => {
-    setStates(State.getStatesOfCountry(selectedCountry));
+    const statesOfCountry = State.getStatesOfCountry(selectedCountry);
+    setStates(statesOfCountry || []);
     setCities([]);
+    setSelectedState('');
     setFormData(prev => ({ ...prev, state: '', city: '' }));
   }, [selectedCountry]);
+
+
   useEffect(() => {
-    setCities(City.getCitiesOfState(selectedCountry, selectedState));
+    const citiesOfState = City.getCitiesOfState(selectedCountry, selectedState);
+    setCities(citiesOfState || []);
     setFormData(prev => ({ ...prev, city: '' }));
   }, [selectedState, selectedCountry]);
+
+
   const validateForm = () => {
     const newErrors: FormErrors = {};
     if (!formData.name.trim()) newErrors.name = 'Full Name is required.';
@@ -42,16 +52,54 @@ export default function ApplyNowPage() {
     if (!formData.state) newErrors.state = 'State is required.';
     if (!formData.city) newErrors.city = 'City is required.';
     setErrors(newErrors);
+    console.log("Validation errors: ", newErrors )
     return Object.keys(newErrors).length === 0;
   };
   const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => { const { name, value } = e.target; setFormData(prevState => ({ ...prevState, [name]: value })); };
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const countryIsoCode = e.target.value; setSelectedCountry(countryIsoCode); const countryName = Country.getCountryByCode(countryIsoCode)?.name || ''; setFormData(prev => ({...prev, country: countryName, state: '', city: ''})); setSelectedState(''); };
   const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const stateIsoCode = e.target.value; setSelectedState(stateIsoCode); const stateName = State.getStateByCodeAndCountry(stateIsoCode, selectedCountry)?.name || ''; setFormData(prev => ({...prev, state: stateName, city: ''})); };
   const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const cityName = e.target.value; setFormData(prev => ({...prev, city: cityName})); };
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => { e.preventDefault(); if (validateForm()) { console.log('Form Submitted:', formData); alert('Thank you for your application! We will be in touch shortly.'); setFormData({ name: '', email: '', phone: '', country: '', state: '', city: '', university: '' }); setSelectedCountry(''); setSelectedState(''); } };
+  
+  // 3. Replace the old handleSubmit with this new async version
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!validateForm()) {
+        return; // Stop if validation fails
+    }
+    
+    setIsSubmitting(true);
+
+    try {
+        const response = await fetch('/api/leads', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            alert('Thank you for your application! We will be in touch shortly.');
+            // Reset the form on success
+            setFormData({ name: '', email: '', phone: '', country: '', state: '', city: '', university: '' });
+            setSelectedCountry('');
+            setSelectedState('');
+            setErrors({});
+        } else {
+            // Show a specific error message from the server if one exists
+            alert(`Error: ${result.error || 'Something went wrong.'}`);
+        }
+    } catch (error) {
+        console.error('Submission failed:', error);
+        alert('An unexpected error occurred. Please try again.');
+    } finally {
+        setIsSubmitting(false);
+    }
+  };
 
   return (
-    // ✨ FIX IS HERE: Updated the main container div with the background image and overlay
     <div 
       className="min-h-screen bg-cover bg-center flex items-center justify-center py-8 mt-8 px-4 sm:px-6 lg:px-8 pt-20"
       style={{
@@ -81,7 +129,7 @@ export default function ApplyNowPage() {
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Apply Now</h2>
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               
-              {/* Name, Email, Phone */}
+              {/* Form fields... */}
               <div>
                 <label htmlFor="name" className="form-label">Full Name</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleTextChange} placeholder="e.g., John Doe" required className={`form-input ${errors.name ? 'border-red-500' : ''}`} />
@@ -97,8 +145,6 @@ export default function ApplyNowPage() {
                 <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleTextChange} placeholder="e.g., 9876543210" required className={`form-input ${errors.phone ? 'border-red-500' : ''}`} />
                 {errors.phone && <p className="error-message">{errors.phone}</p>}
               </div>
-
-              {/* Location Grids */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="country" className="form-label">Country</label>
@@ -121,7 +167,6 @@ export default function ApplyNowPage() {
                   {errors.state && <p className="error-message">{errors.state}</p>}
                 </div>
               </div>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="city" className="form-label">City</label>
@@ -139,10 +184,18 @@ export default function ApplyNowPage() {
                 </div>
               </div>
               
-              {/* Submit Button */}
-              <button type="submit" className="w-full flex justify-center items-center py-3 px-4 text-md font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 ease-in-out transform hover:scale-105">
-                <Send className="h-5 w-5 mr-2" />
-                Submit Application
+              {/* 4. Update the submit button to show loading state */}
+              <button 
+                type="submit" 
+                disabled={isSubmitting}
+                className="w-full flex justify-center items-center py-3 px-4 text-md font-medium rounded-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 transition-all duration-300 ease-in-out transform hover:scale-105 disabled:opacity-50"
+              >
+                {isSubmitting ? (
+                  <Loader2 className="h-5 w-5 mr-2 animate-spin" />
+                ) : (
+                  <Send className="h-5 w-5 mr-2" />
+                )}
+                {isSubmitting ? 'Submitting...' : 'Submit Application'}
               </button>
             </form>
           </div>
@@ -151,6 +204,8 @@ export default function ApplyNowPage() {
     </div>
   );
 }
+
+
 
 
 
