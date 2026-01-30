@@ -1,8 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { universityData } from '../../../../lib/universityData'; // Correct path to your data file
-import { BookOpen, CheckCircle, Clock, Home, Link, MapPin, ExternalLink, Microscope, Stethoscope, Users } from 'lucide-react';
+import { CheckCircle, MapPin, ExternalLink, Microscope, Stethoscope } from 'lucide-react';
 
 
 // This is a small helper component for displaying list items with icons
