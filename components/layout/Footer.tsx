@@ -26,8 +26,8 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
               <li><Link href="/services" className="hover:text-blue-400 transition">Our Services</Link></li>
+              <li><Link href="/universities" className="hover:text-blue-400 transition">Universities</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition">About Us</Link></li>
-              <li><Link href="/blog" className="hover:text-blue-400 transition">Blog</Link></li>
               <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</Link></li>
             </ul>
           </div>
@@ -35,12 +35,12 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Study Destinations</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/countries/russia" className="hover:text-blue-400 transition">Russia</Link></li>
-              <li><Link href="/countries/canada" className="hover:text-blue-400 transition">Canada</Link></li>
-              <li><Link href="/countries/germany" className="hover:text-blue-400 transition">Germany</Link></li>
-              <li><Link href="/countries/uk" className="hover:text-blue-400 transition">UK</Link></li>
-              <li><Link href="/countries/australia" className="hover:text-blue-400 transition">Australia</Link></li>
-              <li><Link href="/countries/usa" className="hover:text-blue-400 transition">USA</Link></li>
+              <li><Link href="/countries/russia" className="hover:text-blue-400 transition">Egypt</Link></li>
+              <li><Link href="/countries/canada" className="hover:text-blue-400 transition">Georgia</Link></li>
+              <li><Link href="/countries/germany" className="hover:text-blue-400 transition">Kyrgyzstan</Link></li>
+              <li><Link href="/countries/uk" className="hover:text-blue-400 transition">Kazakhstan</Link></li>
+              {/* <li><Link href="/countries/australia" className="hover:text-blue-400 transition">Australia</Link></li>
+              <li><Link href="/countries/usa" className="hover:text-blue-400 transition">USA</Link></li> */}
             </ul>
           </div>
 
@@ -57,7 +57,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin size={16} className="mt-1 flex-shrink-0" />
-                <span>123 Education Street, Mumbai, India</span>
+                <span>Shahu Colony, Lane 2, Karvenagar, Pune</span>
               </li>
             </ul>
           </div>

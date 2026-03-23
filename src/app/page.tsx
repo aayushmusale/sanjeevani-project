@@ -65,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <WhyUs />
+      {/* <WhyUs /> */}
       <Services />
       <TopUniversities />
       <Guidelines />
