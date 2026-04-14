@@ -50,7 +50,6 @@ const services: Service[] = [
   },
 ];
 
-// ✅ CHANGED to a default export
 export default function Services() {
   return (
     <section className="py-4 pt-20"> {/* Added pt-32 for spacing below the fixed header */}

@@ -3,7 +3,7 @@ import Carousel from '../../../components/information/Carousel';
 import Image from 'next/image';
 import fs from 'fs';
 import path from 'path';
-import sanjivanilogo from '../../../components/images/SanjivaniLogo.jpg'
+import sanjivanilogo from '../../../components/images/sanjivani_icon_image.webp'
 
 // This is a Server Component, so we can fetch data here.
 export default function AboutUsPage() {
@@ -20,19 +20,19 @@ export default function AboutUsPage() {
     <div className="bg-gray-50 text-gray-800 pt-20">
       
       {/* 1. HERO SECTION - More Empathetic and Student-Focused */}
-      <section className="bg-gray-50 py-20">
+      <section className="bg-gray-50 py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
             Your Dream of Becoming a Doctor is Closer Than You Think.
           </h1>
-          <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
+          {/* <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-600">
             We know the path to studying MBBS in Russia can feel overwhelming. At Sanjivani, we’ve been in your shoes. We’re not just consultants; we’re your senior guides, here to make that path clear, simple, and successful.
-          </p>
+          </p> */}
         </div>
       </section>
 
       {/* 2. OUR STORY SECTION - Builds Trust and Authenticity */}
-      <section className="py-2">
+      <section className="">
         <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
           <div className="lg:w-1/2">
              {/* Replace with an actual image of your team or office for better impact */}
@@ -52,6 +52,17 @@ export default function AboutUsPage() {
             <p className="text-lg text-gray-700">
               Our mission isn’t just to get you an admission letter; it’s to ensure you land safely in Russia, settle in comfortably, and have a local support system to help you succeed throughout your entire 6-year medical degree. <br/><b>Your success is our success.</b>
             </p>
+            <p className="text-lg text-gray-700">      
+              Dr. Akash Bhausaheb Dighe is a dedicated and visionary professional in the field of overseas medical education. He completed his MBBS (MD) from Privolzhsky Research Medical University, Nizhny Novgorod, Russia (प्रिवोल्झस्की रिसर्च मेडिकल यूनिवर्सिटी, निझनी नोवोगोरोद, रशिया 🇷🇺).  
+            </p>
+            <p className="text-lg text-gray-700">
+              Since 2019, he has been actively guiding students through his consultancy, helping aspiring medical students achieve their dreams of studying MBBS abroad. Under his leadership, Sanjivani Education Consultancy has successfully guided and placed more than 100+ students in reputed medical universities across countries like Russia 🇷🇺, Georgia 🇬🇪, Kyrgyzstan 🇰🇬, Uzbekistan 🇺🇿, and Egypt 🇪🇬.     
+              </p>
+            <p className="text-lg text-gray-700">          
+              Known for his transparent guidance, personalized counseling, and strong commitment to student success, Dr. Akash has built a trusted name in the field of overseas education. His mission is to make quality medical education accessible and achievable for every deserving student.  
+              Currently based in Pune (Law College Road)         
+            </p><br/>
+            <h4>~Dr. Akash Bhausaheb Dighe (MD, Russia)  <br/>Founding Director – Sanjivani Education Consultancy  </h4>
           </div>
         </div>
       </section>
@@ -59,7 +70,7 @@ export default function AboutUsPage() {
       {/* 3. YOUR JOURNEY TIMELINE - Informative and Valuable */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-2">Your Journey With Us, Simplified</h2>
+          <h2 className="text-3xl font-bold py-6">Your Journey With Us, Simplified</h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">Here’s a clear roadmap of how we’ll guide you, every step of the way.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Step 1 */}
