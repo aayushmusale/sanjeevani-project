@@ -297,7 +297,6 @@ export const universityData: University[] = [
     departments: [
       "General Surgery", "Pediatric Surgery", "Traumatology and Orthopedics", "Anesthesiology", "Ophthalmology", "Forensic Medicine", "Clinical Psychology", "Biochemistry", "Urology"
     ],
-
     affiliatedHospitals: [
       "Russian Children's Clinical Hospital", "City Clinical Hospital No. 1", "Morozov Children's City Clinical Hospital", "Federal Center of Otolaryngology", "Research and Clinical Center of Gerontology"
     ],
