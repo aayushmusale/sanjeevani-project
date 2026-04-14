@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Mail, Send, Loader2 } from 'lucide-react'; // 1. Import Loader2 icon
+import { Mail, Send, Loader2 } from 'lucide-react'; 
 import { Country, State, City } from 'country-state-city';
+
+import { universityData } from '../../../lib/universityData';
 
 // Interfaces remain the same
 interface ICountry { isoCode: string; name: string; }
@@ -20,11 +22,10 @@ export default function ApplyNowPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>('');
   const [selectedState, setSelectedState] = useState<string>('');
   
-  // 2. Add a state to track submission status
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // useEffect and handler functions remain the same...
   useEffect(() => { setCountries(Country.getAllCountries()); }, []);
+  
   useEffect(() => {
     const statesOfCountry = State.getStatesOfCountry(selectedCountry);
     setStates(statesOfCountry || []);
@@ -33,13 +34,11 @@ export default function ApplyNowPage() {
     setFormData(prev => ({ ...prev, state: '', city: '' }));
   }, [selectedCountry]);
 
-
   useEffect(() => {
     const citiesOfState = City.getCitiesOfState(selectedCountry, selectedState);
     setCities(citiesOfState || []);
     setFormData(prev => ({ ...prev, city: '' }));
   }, [selectedState, selectedCountry]);
-
 
   const validateForm = () => {
     const newErrors: FormErrors = {};
@@ -55,16 +54,36 @@ export default function ApplyNowPage() {
     console.log("Validation errors: ", newErrors )
     return Object.keys(newErrors).length === 0;
   };
-  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => { const { name, value } = e.target; setFormData(prevState => ({ ...prevState, [name]: value })); };
-  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const countryIsoCode = e.target.value; setSelectedCountry(countryIsoCode); const countryName = Country.getCountryByCode(countryIsoCode)?.name || ''; setFormData(prev => ({...prev, country: countryName, state: '', city: ''})); setSelectedState(''); };
-  const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const stateIsoCode = e.target.value; setSelectedState(stateIsoCode); const stateName = State.getStateByCodeAndCountry(stateIsoCode, selectedCountry)?.name || ''; setFormData(prev => ({...prev, state: stateName, city: ''})); };
-  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => { const cityName = e.target.value; setFormData(prev => ({...prev, city: cityName})); };
+
+  const handleTextChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => { 
+    const { name, value } = e.target; 
+    setFormData(prevState => ({ ...prevState, [name]: value })); 
+  };
   
-  // 3. Replace the old handleSubmit with this new async version
+  const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => { 
+    const countryIsoCode = e.target.value; 
+    setSelectedCountry(countryIsoCode); 
+    const countryName = Country.getCountryByCode(countryIsoCode)?.name || ''; 
+    setFormData(prev => ({...prev, country: countryName, state: '', city: ''})); 
+    setSelectedState(''); 
+  };
+  
+  const handleStateChange = (e: React.ChangeEvent<HTMLSelectElement>) => { 
+    const stateIsoCode = e.target.value; 
+    setSelectedState(stateIsoCode); 
+    const stateName = State.getStateByCodeAndCountry(stateIsoCode, selectedCountry)?.name || ''; 
+    setFormData(prev => ({...prev, state: stateName, city: ''})); 
+  };
+  
+  const handleCityChange = (e: React.ChangeEvent<HTMLSelectElement>) => { 
+    const cityName = e.target.value; 
+    setFormData(prev => ({...prev, city: cityName})); 
+  };
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!validateForm()) {
-        return; // Stop if validation fails
+        return; 
     }
     
     setIsSubmitting(true);
@@ -82,13 +101,13 @@ export default function ApplyNowPage() {
 
         if (response.ok) {
             alert('Thank you for your application! We will be in touch shortly.');
-            // Reset the form on success
+            
             setFormData({ name: '', email: '', phone: '', country: '', state: '', city: '', university: '' });
             setSelectedCountry('');
             setSelectedState('');
             setErrors({});
         } else {
-            // Show a specific error message from the server if one exists
+            
             alert(`Error: ${result.error || 'Something went wrong.'}`);
         }
     } catch (error) {
@@ -124,7 +143,6 @@ export default function ApplyNowPage() {
             </div>
           </div>
 
-          {/* Right Side: Application Form */}
           <div className="bg-white p-6 md:p-8 rounded-2xl shadow-2xl w-full max-w-lg mx-auto">
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Apply Now</h2>
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
@@ -180,11 +198,24 @@ export default function ApplyNowPage() {
                 </div>
                 <div>
                   <label htmlFor="university" className="form-label">University (Optional)</label>
-                  <input type="text" id="university" name="university" value={formData.university} onChange={handleTextChange} placeholder="e.g., Kazan Federal" className="form-input" />
+                  <select 
+                    id="university" 
+                    name="university" 
+                    value={formData.university} 
+                    onChange={handleTextChange} 
+                    className="form-input"
+                  >
+                    <option value="">Select (Optional)</option>
+                    {universityData.map((uni) => (
+                      <option key={uni.slug} value={uni.name}>
+                        {uni.name}
+                      </option>
+                    ))}
+                  </select>
                 </div>
               </div>
               
-              {/* 4. Update the submit button to show loading state */}
+              
               <button 
                 type="submit" 
                 disabled={isSubmitting}
@@ -204,6 +235,17 @@ export default function ApplyNowPage() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

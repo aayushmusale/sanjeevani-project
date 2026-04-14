@@ -1,10 +1,13 @@
 // src/app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import Header from "../../components/layout/Header";
 import Footer from "../../components/layout/Footer";
 import WhatsAppWidget from "../../components/layout/WhatsAppWidget";
+import { cn } from "@/lib/utils";
+
+const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", figtree.variable)}>
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <Header />
         <main className="flex-grow">

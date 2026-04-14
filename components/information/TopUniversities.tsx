@@ -8,9 +8,14 @@ export default function TopUniversities() {
   const topUniversitySlugs = [
     'privolzhsky-research-medical-university',
     'omsk-state-medical-university',
-    'first-moscow-state-medical-university',
+    'ivanovo-state-medical-university',
     'kazan-state-medical-university',
-    'tambov-state-medical-university'
+    'tambov-state-medical-university',
+    'first-moscow-state-medical-university',
+    'sechenov-first-moscow-state-medical-university',
+    'yaroslavl-state-medical-academy',
+    'smolensk-state-medical-university',
+    'tver-state-medical-academy'
   ];
 
   // 2. Filter the main data array to only include these 5 universities

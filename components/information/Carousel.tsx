@@ -28,7 +28,7 @@ export default function Carousel({ images }: CarouselProps) {
   }
 
   return (
-    <section className="py-16">
+    <section className="py-6 mb-8">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-black mb-12">Our Student Gallery</h2>
         

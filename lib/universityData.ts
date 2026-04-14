@@ -313,6 +313,79 @@ export const universityData: University[] = [
     // --- Data Not in PDF (Placeholders) ---
     annualFees: "$7,800 USD (Approx.)",
 },
+  {
+  // --- Basic Info ---
+  "name": "Ivanovo State Medical University",
+  "slug": "ivanovo-state-medical-university",
+  "location": "Ivanovo, Russia",
+  "image": '/images/ivanovo.webp',
+  "alt": "Main building of Ivanovo State Medical University",
+  "official_website": "https://isu.ru/en/",
+
+  // --- Detailed Info ---
+  "description": "Ivanovo State Medical University (ISMU), established in 1930, is a highly respected government medical institution located in the central part of Russia. It has a 90-year legacy of training exceptional medical professionals, with over 25,000 graduates from more than 28 countries. The university is renowned for its affordable yet high-quality medical education, English-medium MBBS program, and comprehensive hands-on clinical training.",
+  "establishedYear": 1930,
+  "recognition": [
+    "National Medical Commission (NMC) Approved",
+    "World Health Organization (WHO) Recognized",
+    "ECFMG Approved"
+  ],
+  "mediumOfInstruction": "English",
+
+  // --- Academic Details ---
+  "courseDurations": [
+    { "name": "General Medicine (MBBS/MD)", "duration": "6 Years" },
+    { "name": "Dentistry", "duration": "5 Years" },
+    { "name": "Pediatrics", "duration": "6 Years" },
+    { "name": "Pharmacy", "duration": "5 Years" }
+  ],
+  "academicSession": "Starts from September",
+  "eligibility": {
+    "academic": "An aggregate of 50% marks in Physics, Chemistry, & Biology in 12th standard (40% for reserved categories) as per NMC guidelines.",
+    "neet": "NEET qualification is mandatory for Indian students."
+  },
+
+  // --- Facilities & Campus Life ---
+  "hostel": {
+    "availability": "Available",
+    "description": "The university provides well-furnished hostels for international students situated near the academic buildings. Rooms are shared (two to three students per room) and equipped with basic furniture, shared kitchens, internet, laundry facilities, and stringent 24/7 security measures."
+  },
+
+  // --- Lists ---
+  "departments": [
+    "General Medicine",
+    "Pediatrics",
+    "Obstetrics and Gynecology",
+    "Anesthesiology and Resuscitation",
+    "Neurology",
+    "Ophthalmology",
+    "Pathological Anatomy",
+    "Psychiatry and Narcology",
+    "Internal Diseases",
+    "Traumatology and Orthopedics",
+    "Surgery",
+    "Endocrinology"
+  ],
+
+  "affiliatedHospitals": [
+    "University 24-hour Multi-specialty Teaching Hospital",
+    "Ivanovo Regional Clinical Hospital",
+    "Ivanovo City Clinical Hospitals",
+    "Regional Children's Clinical Hospital",
+    "Ivanovo Regional Oncology Dispensary"
+  ],
+
+  // --- Visuals ---
+  "gallery": [
+    { "src": "/images/gallery/ivanovo-students-1.jpg", "alt": "International students at Ivanovo State Medical University" },
+    { "src": "/images/gallery/ivanovo-practical-1.jpg", "alt": "ISMU students during a practical clinical session" },
+    { "src": "/images/gallery/ivanovo-hostel-1.jpg", "alt": "Hostel room at Ivanovo State Medical University" },
+    { "src": "/images/gallery/ivanovo-campus.jpg", "alt": "Ivanovo State Medical University campus view" }
+  ],
+
+  // --- Data Not in PDF (Placeholders) ---
+  "annualFees": "$4,500 USD (Approx.)"
+},
 // ==========================================
   // NEW UNIVERSITIES (Batch 2: 5 to 14)
   // ==========================================
@@ -681,7 +754,7 @@ export const universityData: University[] = [
     name: "I.M. Sechenov First Moscow State Medical University",
     slug: "sechenov-first-moscow-state-medical-university",
     location: "Moscow, Russia",
-    image: '/images/sechenov-first.webp',
+    image: '/images/sechenov.webp',
     alt: "I.M. Sechenov First Moscow State Medical University",
     official_website: "https://www.sechenov.ru/eng/",
     description: "Often referred to simply as Sechenov University, it is the oldest, largest, and leading Russian medical university, founded in 1758. It is an internationally recognized hub for medical science and training, offering unparalleled clinical exposure and top-tier research facilities in the heart of Moscow.",

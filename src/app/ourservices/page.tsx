@@ -1,7 +1,5 @@
 import { BookOpen, FileText, Globe, Home, LifeBuoy, Plane } from 'lucide-react';
-import React from 'react';
 
-// Descriptions are now written from the perspective of Sanjivani Education Consultancy.
 const servicesData = [
   {
     icon: <Globe className="h-10 w-10 text-red-600 mb-4" />,
@@ -53,13 +51,13 @@ export default function ServicesPage() {
           {servicesData.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col items-start"
+              className="bg-red-600 text-white border border-red-700 p-8 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out flex flex-col items-start"
             >
               {service.icon}
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl font-bold mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-left flex-grow">
+              <p className="text-left flex-grow">
                 {service.description}
               </p>
             </div>
