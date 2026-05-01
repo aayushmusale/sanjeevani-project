@@ -14,6 +14,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Sanjivani Education Consultancy - Study Abroad",
   description: "Find the best universities for your study abroad journey. Low fees, worldwide recognition. Apply now!",
+  icons: {
+    icon: "/images/logo.webp", // Path to your icon in the /public folder
+  },
 };
 
 export default function RootLayout({

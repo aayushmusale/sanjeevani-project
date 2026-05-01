@@ -3,11 +3,11 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion } from "motion/react";
 import { useRef } from "react";
-
+import bharath from '../../../public/images/studentgallery/bharath.webp'
 type Testimonial = {
   quote: string;
   name: string;
-  designation: string;
+  // designation: string;
   src: string;
 };
 
@@ -75,7 +75,7 @@ const AnimatedTestimonials = ({
               {/* Name & Designation */}
               <div className="flex flex-row items-center justify-center flex-wrap gap-1.5">
                 <h4 className="text-amber-500 font-semibold text-base">{t.name}</h4>
-                <span className="text-gray-500 text-sm">{t.designation}</span>
+                {/* <span className="text-gray-500 text-sm">{t.designation}</span> */}
               </div>
             </div>
           </motion.div>
@@ -101,37 +101,21 @@ const AnimatedTestimonials = ({
   );
 };
 
+
 export default function TestimonialsPage() {
   const sanjeevaniTestimonials = [
     {
-      quote: "Like this video and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.",
-      name: "Avinash Kr",
-      designation: "Co-Founder at xyz",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop"
-    },
-    {
-      quote: "Like this video and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.",
+      quote: "I am Bharat Kunal, I am studying at Privolzhsky state medical University. Sanjivani Education gave me an amazing opportunity to study MBBS in Russia. The team helped me very much. Thank you very much Team Sanjivani and Akash Dighe Sir.",
       name: "Bharat Kunal",
-      designation: "Manager at xyz",
-      src: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=3387&auto=format&fit=crop"
+      // designation: "Manager at xyz",
+      // Notice how we don't include the word 'public'
+      src: "/images/studentgallery/bharath.webp" 
     },
     {
-      quote: "Like this video and ask your questions in comment section, don't forget to Subscribe Easy Tutorials YouTube channel to watch more videos of website designing, digital marketing and photoshop.",
-      name: "Prabhakar D",
-      designation: "Founder / CEO at xyz",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop"
-    },
-    {
-      quote: "Sanjeevani made my dream of studying abroad a reality. Their guidance and university selection process was incredibly smooth and stress-free from start to finish.",
-      name: "Riya Kabadi",
-      designation: "Student at ABC University",
-      src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3461&auto=format&fit=crop"
-    },
-    {
-      quote: "The counselors here truly care about your future. They helped me secure an amazing scholarship for my undergraduate studies. Highly recommended!",
+      quote: "The counselors here truly care about your future. Got admission in Kazan State University with amazing staff and amazing college experience. All thanks to Sanjivani Eduacation to help me secure my dream University.",
       name: "Shlok Dahale",
-      designation: "Engineering Student",
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3387&auto=format&fit=crop"
+      // designation: "Engineering Student",
+      src: "/images/studentgallery/shlok.webp"
     }
   ];
 
@@ -142,8 +126,6 @@ export default function TestimonialsPage() {
     </main>
   );
 }
-
-
 
 
 

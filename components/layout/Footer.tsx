@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          {/* Column 1: Brand & Socials */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">
               {process.env.NEXT_PUBLIC_COMPANY_NAME}
@@ -21,6 +22,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Column 2: Quick Links */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
@@ -33,6 +35,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 3: Study Destinations */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Study Destinations</h3>
             <ul className="space-y-2 text-sm">
@@ -41,23 +44,17 @@ export default function Footer() {
               <h6>Kyrgyzstan</h6>
               <h6>Egypt</h6>
               <h6>Kazakhstan</h6>
-              {/* <li><Link href="/countries/russia" className="hover:text-blue-400 transition">Russia</Link></li>
-              <li><Link href="/countries/canada" className="hover:text-blue-400 transition">Georgia</Link></li>
-              <li><Link href="/countries/germany" className="hover:text-blue-400 transition">Kyrgyzstan</Link></li>
-              <li><Link href="/countries/uk" className="hover:text-blue-400 transition">Kazakhstan</Link></li>
-              <li><Link href="/countries/russia" className="hover:text-blue-400 transition">Egypt</Link></li> */}
-              {/* <li><Link href="/countries/australia" className="hover:text-blue-400 transition">Australia</Link></li>
-              <li><Link href="/countries/usa" className="hover:text-blue-400 transition">USA</Link></li> */}
             </ul>
           </div>
 
+          {/* Column 4: Contact Us */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-start space-x-2">
                 <Phone size={16} className="mt-1 flex-shrink-0" />
                 <span>{process.env.NEXT_PUBLIC_COMPANY_PHONE},</span>
-                <span>{process.env.ALTERNATE_PHONE_NUMBER}</span>
+                <span>{process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}</span>
               </li>
               <li className="flex items-start space-x-2">
                 <Mail size={16} className="mt-1 flex-shrink-0" />
@@ -71,10 +68,23 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.</p>
-          <p> Website developed by @aayushmusale</p>
+        {/* Bottom Section: Copyright, Dev Credit & Legal Links */}
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+          <div className="text-center md:text-left mb-4 md:mb-0">
+            <p>&copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.</p>
+            <p className="mt-1 text-gray-500">Website developed by @aayushmusale</p>
+          </div>
+          
+          <div className="flex space-x-6 text-gray-400">
+            <Link href="/privacy-policy" className="hover:text-blue-400 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms-and-conditions" className="hover:text-blue-400 transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
         </div>
+
       </div>
     </footer>
   );

@@ -3,17 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import { Mail, Send, Loader2 } from 'lucide-react'; 
 import { Country, State, City } from 'country-state-city';
-
+import Link from 'next/link'; 
 import { universityData } from '../../../lib/universityData';
 
-// Interfaces remain the same
 interface ICountry { isoCode: string; name: string; }
 interface IState { isoCode: string; name: string; }
 interface ICity { name: string; }
 interface FormData { name: string; email: string; phone: string; country: string; state: string; city: string; university: string; }
-interface FormErrors { name?: string; email?: string; phone?: string; country?: string; state?: string; city?: string; }
+interface FormErrors { name?: string; email?: string; phone?: string; country?: string; state?: string; city?: string; terms?: string; }
 
-export default function ApplyNowPage() {
+export default function ContactForm() { 
   const [formData, setFormData] = useState<FormData>({ name: '', email: '', phone: '', country: '', state: '', city: '', university: '' });
   const [errors, setErrors] = useState<FormErrors>({});
   const [countries, setCountries] = useState<ICountry[]>([]);
@@ -23,6 +22,7 @@ export default function ApplyNowPage() {
   const [selectedState, setSelectedState] = useState<string>('');
   
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   useEffect(() => { setCountries(Country.getAllCountries()); }, []);
   
@@ -50,8 +50,12 @@ export default function ApplyNowPage() {
     if (!formData.country) newErrors.country = 'Country is required.';
     if (!formData.state) newErrors.state = 'State is required.';
     if (!formData.city) newErrors.city = 'City is required.';
+    
+    if (!termsAccepted) {
+      newErrors.terms = 'You must accept the Terms and Privacy Policy.';
+    }
+
     setErrors(newErrors);
-    console.log("Validation errors: ", newErrors )
     return Object.keys(newErrors).length === 0;
   };
 
@@ -101,13 +105,12 @@ export default function ApplyNowPage() {
 
         if (response.ok) {
             alert('Thank you for your application! We will be in touch shortly.');
-            
             setFormData({ name: '', email: '', phone: '', country: '', state: '', city: '', university: '' });
             setSelectedCountry('');
             setSelectedState('');
+            setTermsAccepted(false);
             setErrors({});
         } else {
-            
             alert(`Error: ${result.error || 'Something went wrong.'}`);
         }
     } catch (error) {
@@ -121,13 +124,10 @@ export default function ApplyNowPage() {
   return (
     <div 
       className="min-h-screen bg-cover bg-center flex items-center justify-center py-8 mt-8 px-4 sm:px-6 lg:px-8 pt-20"
-      style={{
-        backgroundImage: `url('/images/applynowBGimage.webp')`
-      }}
+      style={{ backgroundImage: `url('/images/applynowBGimage.webp')` }}
     >
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Side Content */}
           <div className="text-center lg:text-left">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
               Your First Step Towards Becoming a <span className="text-red-600">Doctor</span>.
@@ -147,7 +147,6 @@ export default function ApplyNowPage() {
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">Apply Now</h2>
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               
-              {/* Form fields... */}
               <div>
                 <label htmlFor="name" className="form-label">Full Name</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleTextChange} placeholder="e.g., John Doe" required className={`form-input ${errors.name ? 'border-red-500' : ''}`} />
@@ -215,6 +214,31 @@ export default function ApplyNowPage() {
                 </div>
               </div>
               
+              <div className="flex flex-col mt-4 mb-6">
+                <div className="flex items-start">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="terms"
+                      name="terms"
+                      type="checkbox"
+                      checked={termsAccepted}
+                      onChange={(e) => setTermsAccepted(e.target.checked)}
+                      className={`w-4 h-4 border rounded bg-gray-50 focus:ring-3 focus:ring-red-300 ${errors.terms ? 'border-red-500' : 'border-gray-300'}`}
+                    />
+                  </div>
+                  <label htmlFor="terms" className="ml-2 text-sm font-medium text-gray-900">
+                    I agree to the{' '}
+                    <Link href="/terms-and-conditions" className="text-red-600 hover:underline">
+                      Terms and Conditions
+                    </Link>{' '}
+                    and{' '}
+                    <Link href="/privacy-policy" className="text-red-600 hover:underline">
+                      Privacy Policy
+                    </Link>.
+                  </label>
+                </div>
+                {errors.terms && <p className="text-xs text-red-500 mt-2">{errors.terms}</p>}
+              </div>
               
               <button 
                 type="submit" 
@@ -235,19 +259,3 @@ export default function ApplyNowPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
