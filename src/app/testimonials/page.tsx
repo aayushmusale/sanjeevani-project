@@ -117,21 +117,21 @@ export default function TestimonialsPage() {
       // designation: "Engineering Student",
       src: "/images/studentgallery/shlok.webp"
     },
-  //   {
-  //   quote: "I was overwhelmed by the application process for studying abroad, but the team at Sanjivani made it completely stress-free. They guided me at every single step, and now I'm studying at Privolzhsky Research Medical University. Truly grateful for their constant support!",
-  //   name: "Riya Kabadi",
-  //   src: "/images/studentgallery/riya.webp"
-  // },
-  // {
-  //   quote: "Choosing Sanjivani Education Consultancy was the best decision for my medical career. They were transparent, incredibly helpful with all the complex paperwork, and ensured I reached Privolzhsky safely. Highly recommend them to anyone wanting to study MBBS in Russia.",
-  //   name: "Tanvi Nagare",
-  //   src: "/images/studentgallery/tanvi.webp"
-  // },
-  // {
-  //   quote: "From university selection to visa processing, Sanjivani handled everything flawlessly. Their personalized approach gave my parents and me so much peace of mind. I am absolutely thrilled to start my journey at Privolzhsky Research Medical University!",
-  //   name: "Sanskruti Shinde",
-  //   src: "/images/studentgallery/sanskruti.webp"
-  // },
+    {
+    quote: "I was overwhelmed by the application process for studying abroad, but the team at Sanjivani made it completely stress-free. They guided me at every single step, and now I'm studying at Privolzhsky Research Medical University. Truly grateful for their constant support!",
+    name: "Riya Kabadi",
+    src: "/images/studentgallery/riya.webp"
+  },
+  {
+    quote: "Choosing Sanjivani Education Consultancy was the best decision for my medical career. They were transparent, incredibly helpful with all the complex paperwork, and ensured I reached Privolzhsky safely. Highly recommend them to anyone wanting to study MBBS in Russia.",
+    name: "Tanvi Nagare",
+    src: "/images/studentgallery/tanvi.webp"
+  },
+  {
+    quote: "From university selection to visa processing, Sanjivani handled everything flawlessly. Their personalized approach gave my parents and me so much peace of mind. I am absolutely thrilled to start my journey at Privolzhsky Research Medical University!",
+    name: "Sanskruti Shinde",
+    src: "/images/studentgallery/sanskruti.webp"
+  },
   {
     quote: "What I loved most about Sanjivani was their quick responses and genuine advice. They didn't just help with my admission to Privolzhsky Research Medical University; they made sure I was settled in well even after arriving. A fantastic and reliable consultancy.",
     name: "Amaan Mohammad",
