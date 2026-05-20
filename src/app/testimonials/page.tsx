@@ -112,7 +112,7 @@ export default function TestimonialsPage() {
       src: "/images/studentgallery/bharath.webp" 
     },
     {
-      quote: "The counselors here truly care about your future. Got admission in Privolzhsky State Medical University with amazing staff and amazing college experience. All thanks to Sanjivani Eduacation to help me secure my dream University.",
+      quote: "The counselors here truly care about your future. Got admission in Privolzhsky Research Medical University with amazing staff and amazing college experience. All thanks to Sanjivani Eduacation to help me secure my dream University.",
       name: "Shlok Dahale",
       // designation: "Engineering Student",
       src: "/images/studentgallery/shlok.webp"
