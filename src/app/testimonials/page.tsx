@@ -105,14 +105,14 @@ const AnimatedTestimonials = ({
 export default function TestimonialsPage() {
   const sanjeevaniTestimonials = [
     {
-      quote: "I am Bharat Kunal, I am studying at Privolzhsky state medical University. Sanjivani Education gave me an amazing opportunity to study MBBS in Russia. The team helped me very much. Thank you very much Team Sanjivani and Akash Dighe Sir.",
-      name: "Bharat Kunal",
+      quote: "I am Bharat T., I am studying at Privolzhsky State Medical University. Sanjivani Education gave me an amazing opportunity to study MBBS in Russia. The team helped me very much. Thank you very much Team Sanjivani and Akash Dighe Sir.",
+      name: "Bharat T.",
       // designation: "Manager at xyz",
       // Notice how we don't include the word 'public'
       src: "/images/studentgallery/bharath.webp" 
     },
     {
-      quote: "The counselors here truly care about your future. Got admission in Kazan State University with amazing staff and amazing college experience. All thanks to Sanjivani Eduacation to help me secure my dream University.",
+      quote: "The counselors here truly care about your future. Got admission in Privolzhsky State Medical University with amazing staff and amazing college experience. All thanks to Sanjivani Eduacation to help me secure my dream University.",
       name: "Shlok Dahale",
       // designation: "Engineering Student",
       src: "/images/studentgallery/shlok.webp"
