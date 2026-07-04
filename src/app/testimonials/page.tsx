@@ -141,7 +141,134 @@ export default function TestimonialsPage() {
     quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
     name: "Makarand Erande",
     src: "/images/studentgallery/makarand erande.webp"
+  },
+  // New ones
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Vaishali Ranjan",
+    src: "/images/studentgallery/vaishali_ranjan.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Kumar Rachit",
+    src: "/images/studentgallery/rachit_kumar.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Meena Gaurav",
+    src: "/images/studentgallery/meena_gaurav.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Verma Nitish",
+    src: "/images/studentgallery/verma_nitish.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Kumar Prashant",
+    src: "/images/studentgallery/kumar_prashant.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Lodhi Shreya",
+    src: "/images/studentgallery/lodhi_shreya.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Singh Gurdeep",
+    src: "/images/studentgallery/singh_gurdeep.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Bhatnagar Achintya",
+    src: "/images/studentgallery/bhatnagar_achintya.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Yadav Akash",
+    src: "/images/studentgallery/yadav_akash.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Parida Rupesh",
+    src: "/images/studentgallery/parida_rupesh.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Kumar Aman",
+    src: "/images/studentgallery/kumar_aman.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Yadav Saumya",
+    src: "/images/studentgallery/yadav_saumya.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Singh Natasha",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Kumar Dhruv",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Shaji Shelja",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Ahmad Tahseen",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Singh Saloni",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Atole Adarsh",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Upadhyay Deeksha",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Gupta Rabi",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Sharma Riya",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Singh Yashika",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Sen Anurag",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Mandal Arkaprabha",
+    src: "/images/studentgallery/singh_natasha.webp"
+  },
+  {
+    quote: "Getting into Omsk State Medical University felt like a distant dream until I connected with Sanjivani. The counselors are highly knowledgeable and took care of all the heavy lifting with the documentation. Thank you for making my medical aspirations a reality!",
+    name: "Aayushi Kumari",
+    src: "/images/studentgallery/singh_natasha.webp"
   }
+
   ];
 
   return (

@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
+              
               <li><Link href="/ourservices" className="hover:text-blue-400 transition">Our Services</Link></li>
               <li><Link href="/universities" className="hover:text-blue-400 transition">Universities</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition">About Us</Link></li>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</Link></li>
             </ul>
           </div>
-
+<li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
           {/* Column 3: Study Destinations */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Study Destinations</h3>
@@ -72,7 +72,17 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
           <div className="text-center md:text-left mb-4 md:mb-0">
             <p>&copy; {new Date().getFullYear()} {process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.</p>
-            <p className="mt-1 text-gray-500">Website developed by @aayushmusale</p>
+            <p className="mt-1 text-gray-500">
+              Website developed by{' '}
+              <a 
+                href="https://aayush-portfolio-tau-weld.vercel.app/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors duration-200 underline underline-offset-4"
+              >
+                @aayushmusale
+              </a>
+            </p>
           </div>
           
           <div className="flex space-x-6 text-gray-400">
