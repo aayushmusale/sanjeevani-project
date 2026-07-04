@@ -26,7 +26,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              
+              <li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
               <li><Link href="/ourservices" className="hover:text-blue-400 transition">Our Services</Link></li>
               <li><Link href="/universities" className="hover:text-blue-400 transition">Universities</Link></li>
               <li><Link href="/about" className="hover:text-blue-400 transition">About Us</Link></li>
@@ -34,7 +34,7 @@ export default function Footer() {
               <li><Link href="/gallery" className="hover:text-blue-400 transition">Gallery</Link></li>
             </ul>
           </div>
-<li><Link href="/" className="hover:text-blue-400 transition">Home</Link></li>
+
           {/* Column 3: Study Destinations */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">Study Destinations</h3>
