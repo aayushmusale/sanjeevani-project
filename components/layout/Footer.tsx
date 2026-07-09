@@ -82,6 +82,15 @@ export default function Footer() {
               >
                 @aayushmusale
               </a>
+              {' and '}
+              <a 
+                href="https://github.com/Vipul-104" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-gray-300 transition-colors duration-200 underline underline-offset-4"
+            >
+              @vipulbarmukh
+            </a>
             </p>
           </div>
           
